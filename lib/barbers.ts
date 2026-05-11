@@ -16,6 +16,6 @@ export const BARBERS: Barber[] = [
     yearsInChair: "Cutting for years — owner since 2025",
     specialty: "Classic cuts, fades, beards & hot towel shaves",
     image: asset("/greg.png"),
-    instagram: "{{INSTAGRAM_HANDLE}}",
+    instagram: "@gregscutsofficial",
   },
 ];
