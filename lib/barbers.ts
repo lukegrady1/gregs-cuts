@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type Barber = {
   slug: string;
   name: string;
@@ -13,7 +15,7 @@ export const BARBERS: Barber[] = [
     name: "Greg Weatherspoon",
     yearsInChair: "Cutting for years — owner since 2025",
     specialty: "Classic cuts, fades, beards & hot towel shaves",
-    image: "/greg.png",
+    image: asset("/greg.png"),
     instagram: "{{INSTAGRAM_HANDLE}}",
   },
 ];

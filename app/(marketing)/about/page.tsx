@@ -7,6 +7,7 @@ import { VintageFrame } from "@/components/ui/VintageFrame";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ABOUT_STORY, SITE } from "@/lib/content";
 import { BARBERS } from "@/lib/barbers";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About",
@@ -38,7 +39,7 @@ export default function AboutPage() {
           <VintageFrame className="bg-[var(--color-surface)]">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="/greg.png"
+                src={asset("/greg.png")}
                 alt="Greg Weatherspoon, owner of Greg's Cuts"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
