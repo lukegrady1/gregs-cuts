@@ -83,7 +83,13 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="lg:hidden fixed inset-0 top-16 z-30 bg-[var(--color-bg)] border-t border-[var(--color-line)] flex flex-col">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site navigation"
+          className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-50 border-t border-[var(--color-line)] flex flex-col overflow-y-auto"
+          style={{ backgroundColor: "#0E0E0E" }}
+        >
           <nav className="flex-1 flex flex-col gap-2 p-8" aria-label="Mobile">
             {NAV.map((item) => (
               <Link
@@ -95,7 +101,10 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="p-6 border-t border-[var(--color-line)]">
+          <div
+            className="p-6 border-t border-[var(--color-line)]"
+            style={{ backgroundColor: "#0E0E0E" }}
+          >
             <Button href="/book" size="lg" className="w-full">
               Book Now
             </Button>

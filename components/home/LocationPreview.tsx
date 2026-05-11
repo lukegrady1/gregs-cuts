@@ -72,7 +72,7 @@ export function LocationPreview() {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] lg:aspect-auto lg:h-full min-h-[360px] border border-[var(--color-line)]">
+        <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px] border border-[var(--color-line)] overflow-hidden">
           <iframe
             src={embedSrc}
             className="absolute inset-0 w-full h-full grayscale-[40%] contrast-[1.05]"
