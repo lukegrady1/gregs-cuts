@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0E0E0E;
+  --color-surface: #1A1715;
+  --color-surface-2: #25201C;
+  --color-ink: #F4EFE6;
+  --color-ink-muted: #B8AFA1;
+  --color-accent: #C8A24B;
+  --color-accent-hover: #D9B563;
+  --color-danger: #B23A2E;
+  --color-line: #3A332D;
+
+  --font-display: var(--font-display-google), "Bebas Neue", sans-serif;
+  --font-body: var(--font-body-google), "Inter", sans-serif;
+  --font-accent: var(--font-accent-google), "Caveat", cursive;
+}
+
+:root {
+  --color-bg: #0E0E0E;
+  --color-surface: #1A1715;
+  --color-surface-2: #25201C;
+  --color-ink: #F4EFE6;
+  --color-ink-muted: #B8AFA1;
+  --color-accent: #C8A24B;
+  --color-accent-hover: #D9B563;
+  --color-danger: #B23A2E;
+  --color-line: #3A332D;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+/* Vintage frame: cream double border around photos */
+.vintage-frame {
+  position: relative;
+  padding: 8px;
+  border: 1px solid var(--color-ink);
+}
+
+.vintage-frame::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--color-ink);
+  pointer-events: none;
+}
+
+.vintage-frame--gold {
+  border-color: var(--color-accent);
+}
+
+.vintage-frame--gold::before {
+  border-color: var(--color-accent);
+}
+
+/* Barber pole stripe — full-width thin band, animated diagonal */
+.barber-pole {
+  height: 8px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-danger) 0,
+    var(--color-danger) 10px,
+    var(--color-ink) 10px,
+    var(--color-ink) 20px,
+    var(--color-accent) 20px,
+    var(--color-accent) 30px,
+    var(--color-ink) 30px,
+    var(--color-ink) 40px
+  );
+  background-size: 56.57px 56.57px;
+  animation: barber-pole-slide 4s linear infinite;
+}
+
+@keyframes barber-pole-slide {
+  from { background-position: 0 0; }
+  to   { background-position: 56.57px 0; }
+}
+
+/* Grain overlay — fixed, sits above bg, beneath content */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: url("/noise.svg");
+  background-size: 200px 200px;
+}
+
+/* Massive faded numeral decoration */
+.giant-numeral {
+  font-family: var(--font-display);
+  color: var(--color-line);
+  font-size: clamp(16rem, 32vw, 32rem);
+  line-height: 0.8;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Snap row for review scroller */
+.snap-row {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-row > * {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
