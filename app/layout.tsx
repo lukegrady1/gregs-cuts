@@ -78,6 +78,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${bebas.variable} ${inter.variable} ${caveat.variable}`}>
       <head>
+        <link rel="preconnect" href="https://api.gradydigital.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://link.msgsndr.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.gradydigital.com" />
+        <link rel="dns-prefetch" href="https://link.msgsndr.com" />
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  where: { selector_matches: "a[href$='/book/'], a[href$='/book']" },
+                  eagerness: "moderate",
+                },
+              ],
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

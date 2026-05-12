@@ -12,8 +12,10 @@ export function GhlCalendarEmbed() {
         style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "800px" }}
         scrolling="no"
         id="gregs-cuts-booking"
+        loading="eager"
+        fetchPriority="high"
       />
-      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
   );
 }

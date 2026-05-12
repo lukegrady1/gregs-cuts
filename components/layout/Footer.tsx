@@ -45,9 +45,7 @@ export function Footer() {
           <ul className="space-y-3 text-[var(--color-ink-muted)]">
             <li>
               <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(
-                  `${SITE.street}, ${SITE.city}, ${SITE.state} ${SITE.zip}`,
-                )}`}
+                href={SITE.mapsUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-start gap-2 hover:text-[var(--color-accent)]"

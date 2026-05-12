@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const today = getTodayKey();
-  const mapsHref = `https://maps.google.com/?q=${encodeURIComponent(
-    `${SITE.street}, ${SITE.city}, ${SITE.state} ${SITE.zip}`,
-  )}`;
+  const mapsHref = SITE.mapsUrl;
   const embedSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-    `${SITE.street}, ${SITE.city}, ${SITE.state} ${SITE.zip}`,
+    `${SITE.name}, ${SITE.street}, ${SITE.city}, ${SITE.state} ${SITE.zip}`,
   )}&output=embed`;
 
   return (

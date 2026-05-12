@@ -16,7 +16,8 @@ export const SITE = {
   domain: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lukegrady1.github.io/gregs-cuts",
   facebookUrl: "https://www.facebook.com/p/Gregs-cuts-61580414766906/",
   instagramUrl: "https://www.instagram.com/gregscutsofficial/",
-  bookingUrl: "https://api.gradydigital.com/widget/service-menu/6a01025ffac15ce4f52facc2",
+  bookingUrl: "https://api.gradydigital.com/widget/service-menu/6a039af60acbb9479546c649",
+  mapsUrl: "https://maps.app.goo.gl/NgPzGuStMCeefDsk9",
   ghlContactWebhook: process.env.GHL_CONTACT_WEBHOOK_URL ?? "",
   reviewCount: "8",
 } as const;
