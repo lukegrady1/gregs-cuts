@@ -13,7 +13,6 @@ export function GhlCalendarEmbed() {
         scrolling="no"
         id="gregs-cuts-booking"
         loading="eager"
-        fetchPriority="high"
       />
       <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </div>
