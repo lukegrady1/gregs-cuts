@@ -46,30 +46,17 @@ See `public/images/README.md` for the expected file paths.
 
 The booking page embeds a GoHighLevel calendar via iframe. Set `SITE.ghlCalendarId` in `lib/content.ts` once Greg's GHL sub-account is configured.
 
-## Deploy (GitHub Pages)
+## Deploy (Netlify)
 
-The site is statically exported and hosted at https://lukegrady1.github.io/gregs-cuts/ via GitHub Actions.
-
-**One-time setup:**
-
-1. Repo → **Settings → Pages → Source: GitHub Actions**
-2. Repo → **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `NEXT_PUBLIC_GHL_CONTACT_WEBHOOK_URL`
-   - Value: the GHL inbound webhook URL for the contact form
-3. Push to `main` — `.github/workflows/deploy.yml` runs the build and publishes `out/` to Pages
+The site is statically exported and hosted at https://gregscuts.com via Netlify, which auto-deploys on every push to `main`.
 
 **How it works:**
 
-- `next.config.ts` uses `output: "export"` (static HTML/CSS/JS only, no server)
-- `basePath` and `assetPrefix` are set to `/gregs-cuts` in CI so links resolve under the project subpath
+- `next.config.ts` uses `output: "export"` (static HTML/CSS/JS only, no server) — Netlify serves the `out/` folder directly
 - Images use `unoptimized: true` (no Next.js image optimizer at runtime)
-- `public/.nojekyll` keeps GH Pages from filtering out the `_next/` folder
-- The contact form POSTs directly to the GHL webhook from the browser (no server route)
+- The contact form POSTs directly to the GHL webhook from the browser (no server route); set `NEXT_PUBLIC_GHL_CONTACT_WEBHOOK_URL` in Netlify → Site settings → Environment variables
+- `.github/workflows/deploy.yml` is a legacy GitHub Pages workflow kept around but not the active deploy path
 
 **Local dev:**
 
-`npm run dev` works as normal — `basePath` is unset locally so the site serves from `/`.
-
-**Custom domain (later):**
-
-If you point a custom domain (e.g. `gregscuts.com`) at the Pages site, remove `NEXT_PUBLIC_BASE_PATH` from the workflow env block and update `NEXT_PUBLIC_SITE_URL` to the new domain. Add a `public/CNAME` file containing the domain.
+`npm run dev` works as normal — site serves from `/`.

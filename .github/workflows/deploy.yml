@@ -36,8 +36,7 @@ jobs:
 
       - name: Build
         env:
-          NEXT_PUBLIC_BASE_PATH: /gregs-cuts
-          NEXT_PUBLIC_SITE_URL: https://lukegrady1.github.io/gregs-cuts
+          NEXT_PUBLIC_SITE_URL: https://gregscuts.com
           NEXT_PUBLIC_GHL_CONTACT_WEBHOOK_URL: ${{ secrets.NEXT_PUBLIC_GHL_CONTACT_WEBHOOK_URL }}
         run: npm run build
 

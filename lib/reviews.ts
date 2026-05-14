@@ -13,7 +13,7 @@ export type Review = {
 export const REVIEWS: Review[] = [
   {
     name: "Trisha M.",
-    date: "Apr 2026",
+    date: "Mar 2026",
     rating: 5,
     source: "Google",
     body:
@@ -21,7 +21,7 @@ export const REVIEWS: Review[] = [
   },
   {
     name: "Katherine Pena",
-    date: "Mar 2026",
+    date: "Dec 2025",
     rating: 5,
     source: "Google",
     body:

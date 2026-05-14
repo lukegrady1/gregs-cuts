@@ -13,7 +13,7 @@ export const SITE = {
   street: "10 Pearson Boulevard",
   phone: "(351) 356-3551",
   phoneHref: "tel:+13513563551",
-  domain: process.env.NEXT_PUBLIC_SITE_URL ?? "https://lukegrady1.github.io/gregs-cuts",
+  domain: process.env.NEXT_PUBLIC_SITE_URL ?? "https://gregscuts.com",
   facebookUrl: "https://www.facebook.com/p/Gregs-cuts-61580414766906/",
   instagramUrl: "https://www.instagram.com/gregscutsofficial/",
   mapsUrl: "https://maps.app.goo.gl/NgPzGuStMCeefDsk9",
