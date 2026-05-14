@@ -1,6 +1,7 @@
 import { MapPin, Phone, ArrowRight } from "lucide-react";
 import { SITE, HOURS_LIST, getTodayKey } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { MapEmbed } from "@/components/home/MapEmbed";
 
 export function LocationPreview() {
   const today = getTodayKey();
@@ -71,13 +72,7 @@ export function LocationPreview() {
         </div>
 
         <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[400px] border border-[var(--color-line)] overflow-hidden">
-          <iframe
-            src={embedSrc}
-            className="absolute inset-0 w-full h-full grayscale-[40%] contrast-[1.05]"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Map showing Greg's Cuts location"
-          />
+          <MapEmbed src={embedSrc} title="Map showing Greg's Cuts location" />
         </div>
       </div>
     </section>

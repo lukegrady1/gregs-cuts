@@ -39,7 +39,7 @@ export default function AboutPage() {
           <VintageFrame className="bg-[var(--color-surface)]">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src={asset("/greg.png")}
+                src={asset("/greg.webp")}
                 alt="Greg Weatherspoon, owner of Greg's Cuts"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

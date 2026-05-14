@@ -15,7 +15,7 @@ export const BARBERS: Barber[] = [
     name: "Greg Weatherspoon",
     yearsInChair: "Cutting for years — owner since 2025",
     specialty: "Classic cuts, fades, beards & hot towel shaves",
-    image: asset("/greg.png"),
+    image: asset("/greg.webp"),
     instagram: "@gregscutsofficial",
   },
 ];

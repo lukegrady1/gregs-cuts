@@ -43,10 +43,10 @@ export function Header() {
         <div className="mx-auto max-w-7xl px-6 h-24 flex items-center justify-between">
           <Link href="/" className="group inline-flex items-center" aria-label={SITE.name}>
             <Image
-              src={asset("/gregs_cuts_logo.png")}
+              src={asset("/gregs_cuts_logo.webp")}
               alt={SITE.name}
-              width={1376}
-              height={768}
+              width={900}
+              height={444}
               priority
               className="h-20 w-auto"
             />

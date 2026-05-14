@@ -11,10 +11,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
         <div>
           <Image
-            src={asset("/gregs_cuts_logo.png")}
+            src={asset("/gregs_cuts_logo.webp")}
             alt={SITE.name}
-            width={1376}
-            height={768}
+            width={900}
+            height={444}
             className="h-24 w-auto"
           />
           <p className="mt-4 text-[var(--color-ink-muted)] max-w-xs">{SITE.tagline}</p>
