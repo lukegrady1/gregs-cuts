@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type GalleryCategory = "Fades" | "Beards" | "Classic" | "The Shop";
 
 export type GalleryItem = {
@@ -15,6 +17,7 @@ const U = (id: string) =>
  * Stock placeholders from Unsplash until Greg supplies real photos.
  */
 export const GALLERY: GalleryItem[] = [
+  { src: asset("/greg_cutting_hair.png"), alt: "Greg cutting a client's hair in the shop", category: "Classic", width: 1302, height: 1574 },
   { src: U("1647140655214-e4a2d914971f"), alt: "Scissor work on a fade in progress", category: "Fades", width: 800, height: 1000 },
   { src: U("1503951914875-452162b0f3f1"), alt: "Client mid-cut in the barber chair", category: "Classic", width: 800, height: 1000 },
   { src: U("1517832606299-7ae9b720a186"), alt: "Beard trim with scissors, grayscale", category: "Beards", width: 800, height: 800 },

@@ -1,18 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { SITE, HOURS_LIST, getTodayKey } from "@/lib/content";
+import { asset } from "@/lib/asset";
 
 export function Footer() {
   const today = getTodayKey();
   return (
-    <footer className="bg-[var(--color-surface)] border-t border-[var(--color-line)]">
+    <footer className="bg-[var(--color-bg)] border-t border-[var(--color-line)]">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <div>
-            <span className="font-display text-2xl text-[var(--color-ink)]">
-              {SITE.name.toUpperCase()}
-            </span>
-          </div>
+          <Image
+            src={asset("/gregs_cuts_logo.png")}
+            alt={SITE.name}
+            width={1376}
+            height={768}
+            className="h-24 w-auto"
+          />
           <p className="mt-4 text-[var(--color-ink-muted)] max-w-xs">{SITE.tagline}</p>
           <p className="mt-3 font-accent text-2xl text-[var(--color-accent)]">
             Since {SITE.yearEstablished}
@@ -104,7 +108,7 @@ export function Footer() {
               rel="noreferrer"
               className="hover:text-[var(--color-accent)]"
             >
-              Built by Grady Digital
+              Built by <span className="text-[var(--color-accent)]">Grady Digital</span>
             </a>
           </div>
         </div>

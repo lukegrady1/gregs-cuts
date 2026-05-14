@@ -5,7 +5,7 @@ import { SITE, HOURS_LIST, getTodayKey } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact & Hours",
-  description: `Find ${SITE.name} barbershop in ${SITE.city}, ${SITE.state}. Address, phone, and hours.`,
+  description: `Find ${SITE.name} hair salon in ${SITE.city}, ${SITE.state}. Address, phone, and hours.`,
   alternates: { canonical: "/contact" },
 };
 

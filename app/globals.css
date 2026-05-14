@@ -6,9 +6,9 @@
   --color-surface-2: #25201C;
   --color-ink: #F4EFE6;
   --color-ink-muted: #B8AFA1;
-  --color-accent: #C8322B;
-  --color-accent-hover: #E04A40;
-  --color-danger: #B23A2E;
+  --color-accent: #D62B37;
+  --color-accent-hover: #E84851;
+  --color-danger: #D62B37;
   --color-line: #3A332D;
 
   --font-display: var(--font-display-google), "Bebas Neue", sans-serif;
@@ -22,9 +22,9 @@
   --color-surface-2: #25201C;
   --color-ink: #F4EFE6;
   --color-ink-muted: #B8AFA1;
-  --color-accent: #C8322B;
-  --color-accent-hover: #E04A40;
-  --color-danger: #B23A2E;
+  --color-accent: #D62B37;
+  --color-accent-hover: #E84851;
+  --color-danger: #D62B37;
   --color-line: #3A332D;
 }
 

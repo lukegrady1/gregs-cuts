@@ -1,6 +1,6 @@
 # Greg's Cuts — Website DESIGN.md
 
-**Client:** Greg's Cuts (Barbershop)
+**Client:** Greg's Cuts (Hair Salon)
 **Source of truth:** https://www.facebook.com/p/Gregs-cuts-61580414766906/
 **Agency:** Grady Digital
 **Status:** Spec for Claude Code implementation
@@ -11,7 +11,7 @@
 
 ## 1. Project Overview
 
-A multi-page marketing site for Greg's Cuts, a neighborhood barbershop. The site's job is one thing: **get visitors to book a haircut online.** Every page funnels toward the booking calendar. Secondary goals are establishing trust (photos of the work, real reviews, real barbers) and reducing phone-call volume by answering common questions on-site.
+A multi-page marketing site for Greg's Cuts, a neighborhood hair salon. The site's job is one thing: **get visitors to book a haircut online.** Every page funnels toward the booking calendar. Secondary goals are establishing trust (photos of the work, real reviews, real barbers) and reducing phone-call volume by answering common questions on-site.
 
 **Primary KPI:** Online bookings per month (tracked via GHL calendar).
 **Secondary KPIs:** Phone clicks, direction clicks, form submissions, time-on-page for /services and /gallery.
@@ -42,7 +42,7 @@ Standard Grady Digital build:
 
 **Concept:** *"Old-school chair, new-school polish."*
 
-Greg's Cuts is a real neighborhood barbershop, not a hipster luxury concept. The design should feel like walking into a shop that's been there a while — leather chairs, checkerboard floor, the smell of aftershave — but executed with modern typography and clean web craft so it doesn't read as kitsch.
+Greg's Cuts is a real neighborhood hair salon, not a hipster luxury concept. The design should feel like walking into a shop that's been there a while — leather chairs, checkerboard floor, the smell of aftershave — but executed with modern typography and clean web craft so it doesn't read as kitsch.
 
 ### 3.1 Color Palette
 
@@ -55,9 +55,9 @@ Define in `app/globals.css` as CSS variables:
   --color-surface-2: #25201C;       /* slightly lifted */
   --color-ink: #F4EFE6;             /* warm off-white text */
   --color-ink-muted: #B8AFA1;       /* muted body text */
-  --color-accent: #C8322B;          /* classic barber-pole red — signage, CTAs */
-  --color-accent-hover: #E04A40;
-  --color-danger: #B23A2E;          /* deep red for error states */
+  --color-accent: #D62B37;          /* brand red — signage, CTAs, error states */
+  --color-accent-hover: #E84851;
+  --color-danger: #D62B37;
   --color-line: #3A332D;            /* hairline borders */
 }
 ```
@@ -117,7 +117,7 @@ Footer-only utility pages: `/privacy`, `/terms` (boilerplate).
 
 Each page exports `generateMetadata` with:
 - `title` — page-specific, suffixed " | Greg's Cuts"
-- `description` — 150–160 chars, includes "{{CITY}}" and "barbershop"
+- `description` — 150–160 chars, includes "{{CITY}}" and "hair salon"
 - `openGraph` — image at `/og/{page}.png` (1200×630, generated from `opengraph-image.tsx` per route)
 - `alternates.canonical`
 
@@ -125,16 +125,16 @@ Root `metadata` includes:
 - `metadataBase`
 - Favicon set (`/icon.png`, `/apple-icon.png`)
 - Default OG image
-- `keywords` — modest, e.g. `["{{CITY}} barbershop", "haircuts {{CITY}}", "Greg's Cuts", "fades", "beard trim"]`
+- `keywords` — modest, e.g. `["{{CITY}} hair salon", "haircuts {{CITY}}", "Greg's Cuts", "fades", "beard trim"]`
 
 ### 4.2 Schema.org (JSON-LD)
 
-In `/app/layout.tsx`, inject `BarberShop` schema:
+In `/app/layout.tsx`, inject `HairSalon` schema:
 
 ```ts
 {
   "@context": "https://schema.org",
-  "@type": "BarberShop",
+  "@type": "HairSalon",
   "name": "Greg's Cuts",
   "image": "{{OG_IMAGE_URL}}",
   "address": { "@type": "PostalAddress", "streetAddress": "{{STREET}}", "addressLocality": "{{CITY}}", "addressRegion": "{{STATE}}", "postalCode": "{{ZIP}}" },
@@ -187,7 +187,7 @@ A reusable `<BarberPoleDivider />` component: 8px-tall full-width band of diagon
 
 #### 6.1.1 Hero
 
-This is the showpiece. Goal: communicate "real barbershop, book a chair," and drive a click on `Book Now` within 3 seconds.
+This is the showpiece. Goal: communicate "real hair salon, book a chair," and drive a click on `Book Now` within 3 seconds.
 
 **Layout:** Full-viewport-height (`min-h-[92vh]`), dark background, asymmetric two-column on desktop (60/40), stacked on mobile.
 
@@ -379,7 +379,7 @@ This site has one job. CTAs must be obvious and consistent.
 
 - Site is local — every page mentions `{{CITY}}` naturally in copy
 - Title tags front-load the keyword
-- Schema: `BarberShop` on root, `Service` schema on services page, `Review` schema on the reviews section if reviews are real and approved by Greg
+- Schema: `HairSalon` on root, `Service` schema on services page, `Review` schema on the reviews section if reviews are real and approved by Greg
 - Sitemap.xml + robots.txt via Next.js conventions (`app/sitemap.ts`, `app/robots.ts`)
 - Internal linking: every page links to `/book`; services link to each other; about links to gallery
 - Submit to Google Search Console + Bing Webmaster after launch

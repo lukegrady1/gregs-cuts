@@ -25,12 +25,12 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: {
-    default: `${SITE.name} — Barbershop in ${SITE.city}, ${SITE.state}`,
+    default: `${SITE.name} Hair Salon in ${SITE.city}, ${SITE.state}`,
     template: `%s | ${SITE.name}`,
   },
-  description: `${SITE.name} is a neighborhood barbershop in ${SITE.city}, ${SITE.state}. Sharp cuts, hot towel shaves, walk-ins welcome. Call to book.`,
+  description: `${SITE.name} is a neighborhood hair salon in ${SITE.city}, ${SITE.state}. Sharp cuts, hot towel shaves, walk-ins welcome. Call to book.`,
   keywords: [
-    `${SITE.city} barbershop`,
+    `${SITE.city} hair salon`,
     `haircuts ${SITE.city}`,
     "Greg's Cuts",
     "fades",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: SITE.name,
-    images: ["/og/default.png"],
+    images: [`${SITE.domain}/gregs_cuts_logo.jpeg`],
   },
   twitter: { card: "summary_large_image" },
   icons: {
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "BarberShop",
+    "@type": "HairSalon",
     name: SITE.name,
-    image: `${SITE.domain}/og/default.png`,
+    image: `${SITE.domain}/gregs_cuts_logo.jpeg`,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.street,

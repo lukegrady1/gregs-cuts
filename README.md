@@ -1,6 +1,6 @@
 # Greg's Cuts
 
-Marketing site for Greg's Cuts barbershop. Built per `DESIGN.md` by Grady Digital.
+Marketing site for Greg's Cuts hair salon. Built per `DESIGN.md` by Grady Digital.
 
 ## Stack
 

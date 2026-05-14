@@ -11,7 +11,7 @@ import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Meet the barbers at ${SITE.name} — a real neighborhood barbershop in ${SITE.city}, ${SITE.state}.`,
+  description: `Meet the team at ${SITE.name} — a real neighborhood hair salon in ${SITE.city}, ${SITE.state}.`,
   alternates: { canonical: "/about" },
 };
 

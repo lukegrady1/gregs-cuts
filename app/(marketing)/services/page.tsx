@@ -7,7 +7,7 @@ import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Services & Pricing",
-  description: `Cuts, fades, beard trims, and hot towel shaves at ${SITE.name} barbershop in ${SITE.city}. See the full menu and book online.`,
+  description: `Cuts, fades, beard trims, and hot towel shaves at ${SITE.name} hair salon in ${SITE.city}. See the full menu — call to book.`,
   alternates: { canonical: "/services" },
 };
 

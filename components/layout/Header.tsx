@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { NAV, SITE } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
+import { asset } from "@/lib/asset";
 
 export function Header() {
   const pathname = usePathname();
@@ -38,11 +40,16 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-[var(--color-bg)]/80 border-b border-[var(--color-line)]">
-        <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="group">
-            <span className="font-display text-2xl tracking-wide text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
-              {SITE.name.toUpperCase()}
-            </span>
+        <div className="mx-auto max-w-7xl px-6 h-24 flex items-center justify-between">
+          <Link href="/" className="group inline-flex items-center" aria-label={SITE.name}>
+            <Image
+              src={asset("/gregs_cuts_logo.png")}
+              alt={SITE.name}
+              width={1376}
+              height={768}
+              priority
+              className="h-20 w-auto"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
@@ -88,7 +95,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 border-t border-[var(--color-line)] flex flex-col overflow-y-auto"
+          className="lg:hidden fixed inset-x-0 top-24 bottom-0 z-40 border-t border-[var(--color-line)] flex flex-col overflow-y-auto"
           style={{ backgroundColor: "#0E0E0E" }}
         >
           <nav className="flex-1 flex flex-col gap-2 p-8" aria-label="Mobile">
