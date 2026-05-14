@@ -16,9 +16,6 @@ export function BookingBand() {
         <h2 className="mt-4 font-display text-[var(--color-ink)] text-5xl md:text-7xl">
           Walk In. Walk Out Sharp.
         </h2>
-        <p className="mt-6 text-[var(--color-ink-muted)] text-lg">
-          Give us a call or stop by the shop. No appointments online — just good cuts.
-        </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button href={SITE.phoneHref} size="lg">
             <Phone size={18} />
