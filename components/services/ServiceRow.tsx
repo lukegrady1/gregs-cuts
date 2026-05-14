@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock, Phone } from "lucide-react";
 import type { Service } from "@/lib/services";
+import { SITE } from "@/lib/content";
 import { VintageFrame } from "@/components/ui/VintageFrame";
 
 export function ServiceRow({ service, index }: { service: Service; index: number }) {
@@ -28,12 +28,12 @@ export function ServiceRow({ service, index }: { service: Service; index: number
           </span>
         </div>
         <div className="mt-8">
-          <Link
-            href={`/book?service=${service.slug}`}
+          <a
+            href={SITE.phoneHref}
             className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] font-display uppercase tracking-wide"
           >
-            Book this service <ArrowRight size={16} />
-          </Link>
+            <Phone size={16} /> Call to book
+          </a>
         </div>
       </div>
 

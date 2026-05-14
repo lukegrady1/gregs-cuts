@@ -55,9 +55,9 @@ Define in `app/globals.css` as CSS variables:
   --color-surface-2: #25201C;       /* slightly lifted */
   --color-ink: #F4EFE6;             /* warm off-white text */
   --color-ink-muted: #B8AFA1;       /* muted body text */
-  --color-accent: #C8A24B;          /* brass/gold — barber pole, signage */
-  --color-accent-hover: #D9B563;
-  --color-danger: #B23A2E;          /* deep barber-pole red, used sparingly */
+  --color-accent: #C8322B;          /* classic barber-pole red — signage, CTAs */
+  --color-accent-hover: #E04A40;
+  --color-danger: #B23A2E;          /* deep red for error states */
   --color-line: #3A332D;            /* hairline borders */
 }
 ```

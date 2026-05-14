@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { SITE, HOURS_LIST, getTodayKey } from "@/lib/content";
-import { BarberPoleIcon } from "./BarberPoleIcon";
 
 export function Footer() {
   const today = getTodayKey();
@@ -9,8 +8,7 @@ export function Footer() {
     <footer className="bg-[var(--color-surface)] border-t border-[var(--color-line)]">
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <BarberPoleIcon className="w-4 h-8" />
+          <div>
             <span className="font-display text-2xl text-[var(--color-ink)]">
               {SITE.name.toUpperCase()}
             </span>

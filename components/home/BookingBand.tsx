@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { SITE } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 
@@ -12,21 +12,23 @@ export function BookingBand() {
         02
       </div>
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <p className="eyebrow">Book a chair</p>
+        <p className="eyebrow">Your Chair Is Waiting</p>
         <h2 className="mt-4 font-display text-[var(--color-ink)] text-5xl md:text-7xl">
-          Your Chair Is Waiting.
+          Walk In. Walk Out Sharp.
         </h2>
         <p className="mt-6 text-[var(--color-ink-muted)] text-lg">
-          Pick a time. Show up. Walk out sharp.
+          Give us a call or stop by the shop. No appointments online — just good cuts.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button href="/book" size="lg">
-            Book Now <ArrowRight size={18} />
+          <Button href={SITE.phoneHref} size="lg">
+            <Phone size={18} />
+            Call {SITE.phone}
+          </Button>
+          <Button href={SITE.mapsUrl} variant="secondary" size="lg">
+            <MapPin size={18} />
+            Get Directions
           </Button>
         </div>
-        <p className="mt-6 text-sm text-[var(--color-ink-muted)]">
-          Or call <a href={SITE.phoneHref} className="text-[var(--color-accent)] hover:underline">{SITE.phone}</a>
-        </p>
       </div>
     </section>
   );

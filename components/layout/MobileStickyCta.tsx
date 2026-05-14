@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/content";
 
@@ -33,18 +32,21 @@ export function MobileStickyCta() {
       }`}
     >
       <a
-        href={SITE.phoneHref}
+        href={SITE.mapsUrl}
+        target="_blank"
+        rel="noreferrer"
         className="flex items-center justify-center gap-2 py-4 text-[var(--color-accent)] border-r border-[var(--color-line)] font-display tracking-wide uppercase text-base"
       >
-        <Phone size={18} />
-        Call
+        <MapPin size={18} />
+        Directions
       </a>
-      <Link
-        href="/book"
-        className="flex items-center justify-center py-4 bg-[var(--color-accent)] text-black font-display tracking-wide uppercase text-base"
+      <a
+        href={SITE.phoneHref}
+        className="flex items-center justify-center gap-2 py-4 bg-[var(--color-accent)] text-black font-display tracking-wide uppercase text-base"
       >
-        Book Now
-      </Link>
+        <Phone size={18} />
+        Call Now
+      </a>
     </div>
   );
 }

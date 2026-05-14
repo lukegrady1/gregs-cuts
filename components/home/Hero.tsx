@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Star, Phone, ArrowRight } from "lucide-react";
+import { Star, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { VintageFrame } from "@/components/ui/VintageFrame";
@@ -65,13 +65,13 @@ export function Hero() {
           </motion.p>
 
           <motion.div variants={child} className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/book" size="lg">
-              Book Your Cut
-              <ArrowRight size={18} />
-            </Button>
-            <Button href={SITE.phoneHref} variant="secondary" size="lg">
+            <Button href={SITE.phoneHref} size="lg">
               <Phone size={18} />
               Call {SITE.phone}
+            </Button>
+            <Button href={SITE.mapsUrl} variant="secondary" size="lg">
+              <MapPin size={18} />
+              Get Directions
             </Button>
           </motion.div>
 
@@ -112,16 +112,16 @@ export function Hero() {
           </VintageFrame>
 
           <a
-            href="/book"
+            href={SITE.phoneHref}
             className="absolute -bottom-6 -left-6 sm:-left-10 max-w-xs block bg-[var(--color-surface)] border border-[var(--color-accent)] p-5 transition-colors hover:bg-[var(--color-surface-2)]"
           >
-            <p className="eyebrow mb-1">Book in 30 seconds</p>
+            <p className="eyebrow mb-1">Walk in or call</p>
             <p className="font-display text-2xl text-[var(--color-ink)] leading-tight">
-              Pick a service.<br />
-              Pick a time. Done.
+              Stop by the shop.<br />
+              Or give us a ring.
             </p>
             <span className="mt-2 inline-flex items-center gap-1 text-sm text-[var(--color-accent)]">
-              Start <ArrowRight size={14} />
+              <Phone size={14} /> {SITE.phone}
             </span>
           </a>
         </motion.div>

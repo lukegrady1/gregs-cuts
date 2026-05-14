@@ -57,7 +57,7 @@ export function ContactForm() {
         <CheckCircle2 size={32} className="mx-auto text-[var(--color-accent)]" />
         <h3 className="mt-4 font-display text-3xl text-[var(--color-ink)]">Got it.</h3>
         <p className="mt-2 text-[var(--color-ink-muted)]">
-          We&rsquo;ll get back to you soon. For appointments, the booking page is faster.
+          We&rsquo;ll get back to you soon. For appointments, give us a call or stop in.
         </p>
       </div>
     );

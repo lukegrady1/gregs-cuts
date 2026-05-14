@@ -3,10 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { NAV, SITE } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
-import { BarberPoleIcon } from "./BarberPoleIcon";
 
 export function Header() {
   const pathname = usePathname();
@@ -40,8 +39,7 @@ export function Header() {
     <>
       <header className="fixed top-0 inset-x-0 z-40 backdrop-blur-md bg-[var(--color-bg)]/80 border-b border-[var(--color-line)]">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <BarberPoleIcon className="w-4 h-8" />
+          <Link href="/" className="group">
             <span className="font-display text-2xl tracking-wide text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
               {SITE.name.toUpperCase()}
             </span>
@@ -68,8 +66,9 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button href="/book" size="md" className="hidden sm:inline-flex">
-              Book Now
+            <Button href={SITE.phoneHref} size="md" className="hidden sm:inline-flex">
+              <Phone size={16} />
+              Call Now
             </Button>
             <button
               type="button"
@@ -107,8 +106,9 @@ export function Header() {
             className="p-6 border-t border-[var(--color-line)]"
             style={{ backgroundColor: "#0E0E0E" }}
           >
-            <Button href="/book" size="lg" className="w-full">
-              Book Now
+            <Button href={SITE.phoneHref} size="lg" className="w-full">
+              <Phone size={18} />
+              Call {SITE.phone}
             </Button>
           </div>
         </div>
