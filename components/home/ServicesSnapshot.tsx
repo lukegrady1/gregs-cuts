@@ -10,14 +10,14 @@ export function ServicesSnapshot() {
         <SectionHeading
           eyebrow="Services"
           title="What You Came For."
-          subtitle="The cuts most folks book. Full menu, prices, and durations on the services page."
+          subtitle="The cuts most people book. Full menu and prices on the services page."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {TOP_SERVICES.map((service, i) => (
             <Link
-              key={service.slug}
-              href={`/services#${service.slug}`}
+              key={service.name}
+              href={`/services#${service.anchor}`}
               className="group relative bg-[var(--color-surface)] border border-[var(--color-line)] p-8 transition-all duration-200 hover:border-[var(--color-accent)] hover:-translate-y-1"
             >
               <span className="font-display text-6xl text-[var(--color-line)] group-hover:text-[var(--color-accent)] transition-colors">
@@ -25,9 +25,8 @@ export function ServicesSnapshot() {
               </span>
               <h3 className="mt-2 font-display text-3xl text-[var(--color-ink)]">{service.name}</h3>
               <p className="mt-3 text-[var(--color-ink-muted)]">{service.shortBlurb}</p>
-              <div className="mt-6 flex items-center justify-between">
+              <div className="mt-6">
                 <span className="font-display text-2xl text-[var(--color-accent)]">{service.price}</span>
-                <span className="text-sm text-[var(--color-ink-muted)]">{service.duration}</span>
               </div>
             </Link>
           ))}

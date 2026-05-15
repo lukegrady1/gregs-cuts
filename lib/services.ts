@@ -1,99 +1,115 @@
 export type Service = {
-  slug: string;
   name: string;
-  shortBlurb: string;
-  description: string;
   price: string;
-  duration: string;
-  image: string;
+  note?: string;
 };
 
-const U = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?w=1400&q=80&auto=format&fit=crop`;
+export type ServiceCategory = {
+  slug: string;
+  title: string;
+  note?: string;
+  services: Service[];
+};
 
-export const SERVICES: Service[] = [
+export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
-    slug: "classic-cut",
-    name: "Classic Cut",
-    shortBlurb: "Scissor + clipper cut, hot towel finish.",
-    description:
-      "Traditional cut shaped to your head and your hair — clipper work on the sides, scissor on top, blended clean. Includes a hot towel finish and a quick neck shave.",
-    price: "$35",
-    duration: "30 min",
-    image: U("1503951914875-452162b0f3f1"),
+    slug: "haircuts-and-trims",
+    title: "Haircuts & Trims",
+    services: [
+      { name: "Haircut w/ Beard Trim", price: "$45" },
+      { name: "Shampoo and Haircut", price: "$40" },
+      { name: "Haircut", price: "$30" },
+      { name: "Line Up", price: "$10" },
+      { name: "Bang Trim", price: "$10" },
+      { name: "Beard Trim and Lineup", price: "$25" },
+      { name: "Shampoo", price: "$15" },
+      { name: "Veteran Haircut", price: "$25", note: "With proper I.D." },
+    ],
   },
   {
-    slug: "skin-fade",
-    name: "Skin Fade",
-    shortBlurb: "Bald-fade taper, tight and even.",
-    description:
-      "Bald-fade taper from the skin up, blended into whatever length you want on top. Done with care — no patchy lines, no rushed work. Includes hot towel + neck shave.",
-    price: "$45",
-    duration: "45 min",
-    image: U("1647140655214-e4a2d914971f"),
+    slug: "haircuts-with-blow-dry",
+    title: "Haircuts with Blow-Dry",
+    services: [
+      { name: "Short", price: "$40" },
+      { name: "Medium", price: "$50" },
+      { name: "Long", price: "$60" },
+    ],
   },
   {
-    slug: "beard-trim",
-    name: "Beard Trim",
-    shortBlurb: "Shape, line, and clean finish.",
-    description:
-      "Shape and line up the beard with clippers and a straight razor. Hot towel, beard oil, and a clean cheek line so it grows back right.",
-    price: "$25",
-    duration: "20 min",
-    image: U("1517832606299-7ae9b720a186"),
+    slug: "styling",
+    title: "Styling",
+    note: "Without shampoo and haircut.",
+    services: [
+      { name: "Short", price: "$30" },
+      { name: "Medium", price: "$40" },
+      { name: "Long", price: "$50" },
+    ],
   },
   {
-    slug: "cut-and-beard",
-    name: "Cut + Beard Combo",
-    shortBlurb: "Full reset — head and face.",
-    description:
-      "The full reset. Cut of your choice plus a shaped beard trim, hot towel, and finish. Best value if you're keeping both tidy.",
-    price: "$55",
-    duration: "50 min",
-    image: U("1599351431202-1e0f0137899a"),
+    slug: "shampoo-cut-blow-dry",
+    title: "Shampoo, Cut & Blow-Dry",
+    note: "Curl or flat iron add-on: +$10 short, +$15 medium, +$20 long.",
+    services: [
+      { name: "Short", price: "$45" },
+      { name: "Medium", price: "$55" },
+      { name: "Long", price: "$65" },
+    ],
   },
   {
-    slug: "kids-cut",
-    name: "Kids Cut",
-    shortBlurb: "Under 12 — quick and easy.",
-    description:
-      "Cut for kids under 12. We keep it quick, keep it fun, and let them pick the music. First-cut certificates available on request.",
-    price: "$25",
-    duration: "25 min",
-    image: U("1576168056582-0a851a87ab8e"),
+    slug: "conditioning-treatment",
+    title: "Conditioning Treatment",
+    services: [
+      { name: "Short", price: "$10" },
+      { name: "Medium", price: "$15" },
+      { name: "Long", price: "$20" },
+    ],
   },
   {
-    slug: "senior-cut",
-    name: "Senior Cut",
-    shortBlurb: "65+, classic service.",
-    description:
-      "Classic cut with a hot towel and a slower pace. For our regulars who've been coming in since opening day.",
-    price: "$28",
-    duration: "30 min",
-    image: U("1549271568-e87e07c5406b"),
+    slug: "waxing",
+    title: "Waxing",
+    services: [
+      { name: "Eyebrow Wax", price: "$25" },
+      { name: "Eyebrow, Lip, Chin Wax", price: "$40" },
+    ],
   },
   {
-    slug: "hot-towel-shave",
-    name: "Hot Towel Shave",
-    shortBlurb: "Straight razor, full ritual.",
-    description:
-      "The full straight-razor shave — pre-shave oil, hot towel, lather, two passes, cold towel finish. The closest shave you can get.",
-    price: "$40",
-    duration: "35 min",
-    image: U("1621605815971-fbc98d665033"),
-  },
-  {
-    slug: "line-up",
-    name: "Line-Up",
-    shortBlurb: "Edges only — quick refresh.",
-    description:
-      "Edge-up between cuts. Hairline, sideburns, and neck cleaned with the trimmer. In and out in fifteen.",
-    price: "$15",
-    duration: "15 min",
-    image: U("1605497788044-5a32c7078486"),
+    slug: "other",
+    title: "Other",
+    services: [
+      { name: "Consultation", price: "Free" },
+      {
+        name: "Perm",
+        price: "$70+",
+        note: "Starting price; final cost depends on length and condition.",
+      },
+    ],
   },
 ];
 
-export const TOP_SERVICES = SERVICES.filter((s) =>
-  ["classic-cut", "beard-trim", "cut-and-beard"].includes(s.slug),
-);
+export type TopService = {
+  name: string;
+  shortBlurb: string;
+  price: string;
+  anchor: string;
+};
+
+export const TOP_SERVICES: TopService[] = [
+  {
+    name: "Haircut w/ Beard Trim",
+    shortBlurb: "Cut and beard line, clean finish.",
+    price: "$45",
+    anchor: "haircuts-and-trims",
+  },
+  {
+    name: "Shampoo and Haircut",
+    shortBlurb: "Wash, cut, ready to go.",
+    price: "$40",
+    anchor: "haircuts-and-trims",
+  },
+  {
+    name: "Haircut",
+    shortBlurb: "Classic cut, your style.",
+    price: "$30",
+    anchor: "haircuts-and-trims",
+  },
+];

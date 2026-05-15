@@ -8,7 +8,7 @@ export function WhyGregs() {
   return (
     <section className="bg-[var(--color-surface)] border-y border-[var(--color-line)] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading eyebrow="Why Greg's" title="Reasons folks come back." />
+        <SectionHeading eyebrow="Why Greg's" title="Reasons people come back." />
 
         <div className="mt-12 grid gap-12 md:grid-cols-3">
           {WHY_GREGS.map((item) => {
