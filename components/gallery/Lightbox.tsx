@@ -94,13 +94,25 @@ export function Lightbox({
             className="relative max-w-5xl w-full h-[80vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={items[index].src}
-              alt={items[index].alt}
-              fill
-              sizes="100vw"
-              className="object-contain"
-            />
+            {items[index].type === "video" ? (
+              <video
+                src={items[index].src}
+                controls
+                autoPlay
+                loop
+                playsInline
+                aria-label={items[index].alt}
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+            ) : (
+              <Image
+                src={items[index].src}
+                alt={items[index].alt}
+                fill
+                sizes="100vw"
+                className="object-contain"
+              />
+            )}
             <p className="absolute bottom-4 left-0 right-0 text-center text-sm text-[var(--color-ink-muted)]">
               {items[index].alt}
             </p>

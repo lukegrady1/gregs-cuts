@@ -8,6 +8,7 @@ export type GalleryItem = {
   category: GalleryCategory;
   width: number;
   height: number;
+  type?: "image" | "video";
 };
 
 const U = (id: string) =>
