@@ -96,13 +96,13 @@ export function Hero() {
 
         <motion.div
           variants={child}
-          className="lg:col-span-2 relative"
+          className="lg:col-span-2 relative w-[16rem] sm:w-80 mx-auto lg:w-auto lg:mx-0"
         >
           <VintageFrame className="bg-[var(--color-surface)]">
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&q=80&auto=format&fit=crop"
-                alt="Vintage leather barber chair in front of a brick wall"
+                src="/gregs_storefront.webp"
+                alt="The Greg's Cuts barbershop storefront"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 40vw"

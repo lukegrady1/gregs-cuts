@@ -18,7 +18,7 @@ export const SITE = {
   instagramUrl: "https://www.instagram.com/gregscutsofficial/",
   mapsUrl: "https://maps.app.goo.gl/NgPzGuStMCeefDsk9",
   ghlContactWebhook: process.env.GHL_CONTACT_WEBHOOK_URL ?? "",
-  reviewCount: "8",
+  reviewCount: "14",
 } as const;
 
 export type DayKey =
