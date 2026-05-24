@@ -96,6 +96,9 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
+            <Link href="/policies" className="hover:text-[var(--color-accent)]">
+              Policies
+            </Link>
             <Link href="/privacy" className="hover:text-[var(--color-accent)]">
               Privacy
             </Link>
