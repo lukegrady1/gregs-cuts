@@ -16,7 +16,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="The work"
         title="Cuts, beards, and the shop."
-        intro="Real photos from real chairs. Filter by style or just scroll."
+        intro="Real photos from real chairs."
       />
       <section className="bg-[var(--color-bg)] py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-6">

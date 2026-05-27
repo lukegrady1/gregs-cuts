@@ -11,25 +11,19 @@ export type GalleryItem = {
   type?: "image" | "video";
 };
 
-const U = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?w=1200&q=80&auto=format&fit=crop`;
-
-/**
- * Stock placeholders from Unsplash until Greg supplies real photos.
- */
 export const GALLERY: GalleryItem[] = [
   { src: asset("/greg_cutting_hair.webp"), alt: "Greg cutting a client's hair in the shop", category: "Classic", width: 1302, height: 1574 },
   { src: asset("/greg_cutting_hair2.jpg"), alt: "Greg using clippers on a client in the shop", category: "Classic", width: 1179, height: 1593 },
   { src: asset("/gregs_cuts_tattoo.jpg"), alt: "Fresh fade with a 'Greg's Cuts Established 2025' neck tattoo", category: "Fades", width: 1179, height: 1749 },
-  { src: U("1647140655214-e4a2d914971f"), alt: "Scissor work on a fade in progress", category: "Fades", width: 800, height: 1000 },
-  { src: U("1503951914875-452162b0f3f1"), alt: "Client mid-cut in the barber chair", category: "Classic", width: 800, height: 1000 },
-  { src: U("1517832606299-7ae9b720a186"), alt: "Beard trim with scissors, grayscale", category: "Beards", width: 800, height: 800 },
-  { src: U("1599351431202-1e0f0137899a"), alt: "Full cut and beard combo in progress", category: "Fades", width: 800, height: 1100 },
-  { src: U("1621645582931-d1d3e6564943"), alt: "Black and silver barber chair detail", category: "The Shop", width: 800, height: 800 },
-  { src: U("1621605815971-fbc98d665033"), alt: "Straight razor and barbering tools on counter", category: "Beards", width: 800, height: 1000 },
-  { src: U("1592647420148-bfcc177e2117"), alt: "Red and white leather barber chair", category: "Classic", width: 800, height: 1100 },
-  { src: U("1678356164573-9a534fe43958"), alt: "Front of the shop", category: "The Shop", width: 800, height: 800 },
-  { src: U("1576168056582-0a851a87ab8e"), alt: "Brown leather chairs lined up inside the shop", category: "The Shop", width: 800, height: 1000 },
-  { src: U("1549271568-e87e07c5406b"), alt: "Scissors resting on a folded towel", category: "Classic", width: 800, height: 1000 },
-  { src: U("1675599193990-33d71150902b"), alt: "Brick wall and wooden floor inside the shop", category: "The Shop", width: 800, height: 900 },
+  { src: asset("/IMG_6304.webp"), alt: "Row of barber chairs lined up at the styling stations", category: "The Shop", width: 1179, height: 1538 },
+  { src: asset("/IMG_6297.webp"), alt: "Styling stations with arched mirrors and vanity lighting", category: "The Shop", width: 1179, height: 1539 },
+  { src: asset("/IMG_6298.webp"), alt: "Hair dryer chairs beneath the Greg's Cuts portrait poster", category: "The Shop", width: 1179, height: 1548 },
+  { src: asset("/IMG_6299.webp"), alt: "Shampoo bowls and wash chairs with product shelf", category: "The Shop", width: 1179, height: 1531 },
+  { src: asset("/IMG_6302.webp"), alt: "Waiting area with black-and-white portraits and seating", category: "The Shop", width: 1179, height: 1549 },
+  { src: asset("/IMG_6303.webp"), alt: "Lobby with framed portraits, plants, and display shelves", category: "The Shop", width: 1179, height: 1541 },
+  { src: asset("/IMG_6301.webp"), alt: "Front waiting area looking out toward the storefront", category: "The Shop", width: 1179, height: 1543 },
+  { src: asset("/IMG_6300.webp"), alt: "Mortal Kombat arcade cabinet beside the water bottle rack", category: "The Shop", width: 1179, height: 1531 },
+  { src: asset("/IMG_6294.webp"), alt: "Treatment room with vanity, mirror, and supply shelving", category: "The Shop", width: 1179, height: 867 },
+  { src: asset("/IMG_6295.webp"), alt: "Private treatment cubicle with massage table and curtains", category: "The Shop", width: 1179, height: 1543 },
+  { src: asset("/IMG_6296.webp"), alt: "Red wall clock above the framed restroom sign", category: "The Shop", width: 1179, height: 1538 },
 ];
