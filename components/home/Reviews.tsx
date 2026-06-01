@@ -35,7 +35,7 @@ export function Reviews() {
 
         <div className="mt-12 text-center">
           <Button
-            href="https://www.google.com/search?num=10&hl=en-IT&rlz=1C5KXLH_enUS1210US1210&sca_esv=afc85aa92f7b31d4&cs=0&output=search&tbm=lcl&kgmid=/g/11xzlgbd1d&q=Greg%27s+cuts&shem=epsdc,rimspwouoe&shndl=30&source=sh/x/kp/local/m1/1&kgs=ccb84f14c91ba503&utm_source=epsdc,rimspwouoe,sh/x/kp/local/m1/1#lkt=LocalPoiReviews&rlfi=hd:;si:1158842562816712259,l,CgtHcmVnJ3MgY3V0c5IBCmhhaXJfc2Fsb24;mv:[[42.566922077319035,-71.97996942824662],[42.56656212268097,-71.98045817175338]]&lrd=0x89e15994196a82f1:0x1015092bcb4b1e43,3,,,,"
+            href="https://search.google.com/local/writereview?placeid=ChIJ8YJqGZRZ4YkRQx5LyysJFRA"
             variant="secondary"
             target="_blank"
             rel="noopener noreferrer"
