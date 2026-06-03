@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
+import { ComicsSection } from "@/components/gallery/ComicsSection";
+import { BarberPoleDivider } from "@/components/layout/BarberPoleDivider";
 import { BookingBand } from "@/components/home/BookingBand";
 import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: `Recent cuts, fades, beards, and shop photos from ${SITE.name} in ${SITE.city}.`,
+  description: `Recent cuts, fades, beards, comic strips, and shop photos from ${SITE.name} in ${SITE.city}.`,
   alternates: { canonical: "/gallery" },
 };
 
@@ -23,6 +25,8 @@ export default function GalleryPage() {
           <GalleryGrid />
         </div>
       </section>
+      <BarberPoleDivider />
+      <ComicsSection />
       <BookingBand />
     </>
   );
