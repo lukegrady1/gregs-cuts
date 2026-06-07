@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter_Tight, Caveat } from "next/font/google";
 import { SITE, HOURS_LIST } from "@/lib/content";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { CallTracking } from "@/components/analytics/CallTracking";
 import "./globals.css";
 
 const bebas = Bebas_Neue({
@@ -89,6 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <GoogleAnalytics />
+        <CallTracking />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-[var(--color-accent)] focus:text-black focus:px-4 focus:py-2"
