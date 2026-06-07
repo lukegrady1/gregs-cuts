@@ -8,23 +8,23 @@ export function Footer() {
   const today = getTodayKey();
   return (
     <footer className="bg-[var(--color-bg)] border-t border-[var(--color-line)]">
-      <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-3">
-        <div>
+      <div className="mx-auto max-w-7xl px-6 py-10 md:py-16 grid grid-cols-2 gap-x-6 gap-y-8 md:gap-12 md:grid-cols-3">
+        <div className="col-span-2 md:col-span-1 flex flex-col items-center text-center md:items-start md:text-left">
           <Image
             src={asset("/gregs_cuts_logo.webp")}
             alt={SITE.name}
             width={900}
             height={444}
-            className="h-24 w-auto"
+            className="h-16 md:h-24 w-auto"
           />
-          <p className="mt-4 text-[var(--color-ink-muted)] max-w-xs">{SITE.tagline}</p>
-          <p className="mt-3 font-accent text-2xl text-[var(--color-accent)]">
+          <p className="mt-3 md:mt-4 text-sm md:text-base text-[var(--color-ink-muted)] max-w-xs">{SITE.tagline}</p>
+          <p className="mt-2 md:mt-3 font-accent text-xl md:text-2xl text-[var(--color-accent)]">
             Since {SITE.yearEstablished}
           </p>
         </div>
 
         <div>
-          <p className="eyebrow mb-4">Hours</p>
+          <p className="eyebrow mb-2 md:mb-4">Hours</p>
           <table className="w-full text-sm">
             <tbody>
               {HOURS_LIST.map((d) => (
@@ -43,8 +43,8 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="eyebrow mb-4">Find us</p>
-          <ul className="space-y-3 text-[var(--color-ink-muted)]">
+          <p className="eyebrow mb-2 md:mb-4">Find us</p>
+          <ul className="space-y-2 md:space-y-3 text-[var(--color-ink-muted)]">
             <li>
               <a
                 href={SITE.mapsUrl}
@@ -109,9 +109,9 @@ export function Footer() {
               href="https://gradydigital.com"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[var(--color-accent)]"
+              className="group"
             >
-              Built by <span className="text-[var(--color-accent)]">Grady Digital</span>
+              Built by <span className="group-hover:text-[var(--color-accent)]">Grady Digital</span>
             </a>
           </div>
         </div>
