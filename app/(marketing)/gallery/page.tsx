@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
+import { BeforeAfterSection } from "@/components/gallery/BeforeAfterSection";
 import { ComicsSection } from "@/components/gallery/ComicsSection";
 import { BarberPoleDivider } from "@/components/layout/BarberPoleDivider";
 import { BookingBand } from "@/components/home/BookingBand";
@@ -25,6 +26,8 @@ export default function GalleryPage() {
           <GalleryGrid />
         </div>
       </section>
+      <BarberPoleDivider />
+      <BeforeAfterSection />
       <BarberPoleDivider />
       <ComicsSection />
       <BookingBand />
