@@ -3,6 +3,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { BeforeAfterSection } from "@/components/gallery/BeforeAfterSection";
 import { ComicsSection } from "@/components/gallery/ComicsSection";
+import { FlyerSection } from "@/components/gallery/FlyerSection";
 import { BarberPoleDivider } from "@/components/layout/BarberPoleDivider";
 import { BookingBand } from "@/components/home/BookingBand";
 import { SITE } from "@/lib/content";
@@ -30,6 +31,8 @@ export default function GalleryPage() {
       <BeforeAfterSection />
       <BarberPoleDivider />
       <ComicsSection />
+      <BarberPoleDivider />
+      <FlyerSection />
       <BookingBand />
     </>
   );
