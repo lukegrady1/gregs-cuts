@@ -18,6 +18,51 @@ export type BeforeAfterPair = {
 // Add a new pair by dropping the images into /public and adding an entry below.
 export const BEFORE_AFTER: BeforeAfterPair[] = [
   {
+    label: "Long hair and a bushy beard to a sharp cut and tidy beard",
+    before: {
+      src: asset("/mens-long-hair-beard-before.webp"),
+      alt: "Before: long, wavy hair and a full, bushy beard in profile",
+      width: 1179,
+      height: 1572,
+    },
+    after: {
+      src: asset("/mens-short-haircut-beard-trim-after.webp"),
+      alt: "After: a short, clean haircut with a neatly trimmed beard in profile",
+      width: 1179,
+      height: 1572,
+    },
+  },
+  {
+    label: "Grown-out length to a clean cut with a shaped beard",
+    before: {
+      src: asset("/mens-long-hair-beard-side-before.webp"),
+      alt: "Before: long, grown-out hair and a heavy beard from the side",
+      width: 1179,
+      height: 1572,
+    },
+    after: {
+      src: asset("/mens-tapered-haircut-beard-after.webp"),
+      alt: "After: a tapered cut with a clean neckline and a shaped beard",
+      width: 1179,
+      height: 1572,
+    },
+  },
+  {
+    label: "Frizzy, grown-out hair to a neat finish",
+    before: {
+      src: asset("/mens-long-frizzy-hair-before.webp"),
+      alt: "Before: long, frizzy hair grown well past the collar, seen from behind",
+      width: 1179,
+      height: 1572,
+    },
+    after: {
+      src: asset("/mens-clean-cut-back-after.webp"),
+      alt: "After: a neat, freshly cut back and neckline",
+      width: 1179,
+      height: 1572,
+    },
+  },
+  {
     label: "Grown-out curls to a clean taper fade",
     before: {
       src: asset("/mens-curly-hair-before.webp"),

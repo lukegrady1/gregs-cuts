@@ -15,6 +15,7 @@ export const GALLERY: GalleryItem[] = [
   { src: asset("/greg_cutting_hair.webp"), alt: "Greg cutting a client's hair in the shop", category: "Classic", width: 1302, height: 1574 },
   { src: asset("/greg_cutting_hair2.webp"), alt: "Greg using clippers on a client in the shop", category: "Classic", width: 1179, height: 1593 },
   { src: asset("/gregs_cuts_tattoo.webp"), alt: "Fresh fade with a 'Greg's Cuts Established 2025' neck tattoo", category: "Fades", width: 1179, height: 1749 },
+  { src: asset("/mens-haircut-beard-trim.webp"), alt: "Fresh men's haircut with a neatly trimmed beard in profile", category: "Beards", width: 1179, height: 1570 },
   { src: asset("/gregs-cuts-barber-chairs.webp"), alt: "Row of barber chairs lined up at the styling stations", category: "The Shop", width: 1179, height: 1538 },
   { src: asset("/barber-styling-stations.webp"), alt: "Styling stations with arched mirrors and vanity lighting", category: "The Shop", width: 1179, height: 1539 },
   { src: asset("/hair-dryer-chairs.webp"), alt: "Hair dryer chairs beneath the Greg's Cuts portrait poster", category: "The Shop", width: 1179, height: 1548 },
