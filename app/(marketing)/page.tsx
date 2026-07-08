@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { PromoReel } from "@/components/home/PromoReel";
 import { ServicesSnapshot } from "@/components/home/ServicesSnapshot";
 import { WhyGregs } from "@/components/home/WhyGregs";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <WhyGregs />
       <GalleryPreview />
       <DailyUpdates />
+      <PromoReel />
       <Reviews />
       <BookingBand />
       <LocationPreview />

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { COMICS } from "@/lib/comics";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { VintageFrame } from "@/components/ui/VintageFrame";
 import { Lightbox } from "./Lightbox";
 
@@ -24,14 +23,7 @@ export function ComicsSection() {
   return (
     <section className="bg-[var(--color-bg)] py-20 md:py-24">
       <div className="mx-auto max-w-3xl px-6">
-        <SectionHeading
-          eyebrow="From the chair"
-          title="Greg's Comics"
-          subtitle="Original comic strips by the man himself."
-          align="center"
-        />
-
-        <div className="mt-12 space-y-8">
+        <div className="space-y-8">
           {COMICS.map((comic, idx) => (
             <button
               key={comic.src}
