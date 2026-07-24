@@ -10,6 +10,7 @@ export type ComicStrip = {
 // Add comic strips here — newest first.
 // Drop the image into /public and add an entry below.
 export const COMICS: ComicStrip[] = [
+  { src: asset("/comic_strip15.webp"), alt: "Greg's Cuts comic strip #15 — \"Hair Has Feelings\"", width: 1024, height: 1536 },
   { src: asset("/comic_strip7.webp"), alt: "Greg's comic strip #7", width: 1024, height: 1536 },
   { src: asset("/comic_strip8.webp"), alt: "Greg's comic strip #8", width: 1024, height: 1536 },
   { src: asset("/comic_strip9.webp"), alt: "Greg's comic strip #9", width: 1024, height: 1536 },
