@@ -3,6 +3,7 @@ import { PromoReel } from "@/components/home/PromoReel";
 import { ServicesSnapshot } from "@/components/home/ServicesSnapshot";
 import { WhyGregs } from "@/components/home/WhyGregs";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
+import { LiceFlyer } from "@/components/home/LiceFlyer";
 import { DailyUpdates } from "@/components/home/DailyUpdates";
 import { Reviews } from "@/components/home/Reviews";
 import { BookingBand } from "@/components/home/BookingBand";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ServicesSnapshot />
       <WhyGregs />
       <GalleryPreview />
+      <LiceFlyer />
       <DailyUpdates />
       <PromoReel />
       <Reviews />
