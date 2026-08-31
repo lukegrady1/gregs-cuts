@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
+import { PolicyNotices } from "@/components/policies/PolicyNotices";
 import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -20,10 +21,13 @@ export default function PoliciesPage() {
             ensure quality service for everyone.
           </p>
 
+          <PolicyNotices className="!mt-10" />
+
           <h2 className="text-[var(--color-ink)]">Appointments</h2>
           <ul>
             <li>Appointments are strongly recommended.</li>
-            <li>Walk-ins are welcome when availability allows.</li>
+            <li>Walk-ins are welcome for 1–2 guests when availability allows.</li>
+            <li>Parties of three or more guests must book an appointment in advance.</li>
             <li>Please arrive on time for your appointment.</li>
             <li>
               If you are more than 5 minutes late, your appointment may need to be shortened, rescheduled, or

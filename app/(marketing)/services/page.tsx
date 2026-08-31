@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { BookingBand } from "@/components/home/BookingBand";
+import { PolicyNotices } from "@/components/policies/PolicyNotices";
 import { SERVICE_CATEGORIES } from "@/lib/services";
 import { SITE } from "@/lib/content";
 
@@ -63,6 +64,8 @@ export default function ServicesPage() {
               </ul>
             </section>
           ))}
+
+          <PolicyNotices />
         </div>
       </section>
       <BookingBand />
