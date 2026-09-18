@@ -1,87 +1,91 @@
 # Greg's Cuts — Services & Pricing
 
-> Source: Official price list (in-shop printout)
+> Source: Official service menu (in-shop printout), **effective September 2026**
 > All prices in USD. Use this as the source of truth when replacing services on the website.
 
 ---
 
-## Haircuts & Trims
+## Haircuts & Grooming
 
 | Service | Price |
 |---|---|
-| Haircut w/ Beard Trim | $45 |
-| Shampoo and Haircut | $40 |
-| Haircut | $30 |
-| Line Up | $10 |
-| Bang Trim | $10 |
-| Beard Trim and Lineup | $25 |
-| Shampoo | $15 |
-| Veteran Haircut *(with proper I.D.)* | $25 |
+| Haircut *(includes up to 30 minutes)* | $35 |
+| Haircut + Beard Trim | $50 |
+| Veteran Haircut *(valid veteran/military ID)* | $30 |
+| Line Up | $15 |
+| Bang Trim | $15 |
 
 ---
 
-## Haircuts with Blow-Dry
-
-| Service | Price |
-|---|---|
-| Short Haircut with Blow-Dry | $40 |
-| Medium Haircut with Blow-Dry | $50 |
-| Long Haircut with Blow-Dry | $60 |
-
----
-
-## Styling (without Shampoo and Haircut)
-
-| Service | Price |
-|---|---|
-| Short Style w/o Shampoo and Haircut | $30 |
-| Medium Style w/o Shampoo and Haircut | $40 |
-| Long Style w/o Shampoo and Haircut | $50 |
-
----
-
-## Shampoo, Cut & Blow-Dry
-
-| Length | Base Price | Curl or Flat Iron Add-On |
-|---|---|---|
-| Short | $45 | +$10 |
-| Medium | $55 | +$15 |
-| Long | $65 | +$20 |
-
----
-
-## Conditioning Treatment
+## Shampoo + Haircut (No Blow Dry)
 
 | Length | Price |
 |---|---|
-| Short | $10 |
-| Medium | $15 |
-| Long | $20 |
+| Short Hair | $45 |
+| Medium Hair | $55 |
+| Long Hair | $65 |
 
 ---
 
-## Waxing
+## Styling
+
+| Service | Short | Medium | Long |
+|---|---|---|---|
+| Style Only | $35 | $45 | $55 |
+| Haircut + Blow Dry | $45 | $55 | $65 |
+| Shampoo + Haircut + Blow Dry | $55 | $65 | $75 |
+
+---
+
+## Beard Services
+
+| Service | Price |
+|---|---|
+| Beard Trim + Lineup | $30 |
+| Men's Beard Color | $55 |
+
+---
+
+## Shampoo & Treatments
+
+| Service | Price |
+|---|---|
+| Shampoo Only | $20 |
+| Conditioning Treatment (Short / Medium / Long) | $15 / $20 / $25 |
+| Perm | $80+ |
+
+---
+
+## Waxing & Specialty Services
 
 | Service | Price |
 |---|---|
 | Eyebrow Wax | $25 |
-| Eyebrow, Lip, Chin Wax | $40 |
+| Eyebrow + Lip + Chin | $45 |
+| Gentleman's Signature Facial | $60 |
+| Hot Oil Treatment | $60 |
+| Consultation | FREE |
 
 ---
 
-## Other
+## Extended Haircut Time
 
-| Service | Price |
+$35 includes up to 30 minutes.
+
+| Time in chair | Price |
 |---|---|
-| Consultation | Free |
-| Perm | $70+ |
+| 31–45 min | $45 |
+| 46–60 min | $55 |
+| 61–75 min | $65 |
+
+Standard haircuts requiring additional time due to length, density, transformation work, or complexity are charged $10 per additional 15 minutes.
 
 ---
 
 ## Notes for Implementation
 
-- **Veteran discount** requires proper I.D. — make sure this is noted on the booking page or service description.
-- **Perm pricing** is "$70+" — starting price; final cost depends on hair length/condition. Consider a "Starting at $70" or "$70+" label, or route to a consultation booking.
-- **Curl/Flat Iron add-ons** apply only to the Shampoo, Cut & Blow-Dry tier and scale with length.
+- **Veteran discount** requires a valid veteran/military ID — noted on the services page.
+- **Perm pricing** is "$80+" — starting price; final cost depends on hair length/condition.
 - **Consultation is free** — good candidate for a primary CTA on the homepage.
-- Consider grouping services on the site under the same categories used above (Haircuts & Trims, Haircuts with Blow-Dry, Styling, Shampoo + Cut + Blow-Dry, Conditioning, Waxing, Other) for clean navigation.
+- **Extended haircut time** tiers are rendered by `components/policies/PolicyNotices.tsx`.
+- Category order on the site mirrors the printed menu.

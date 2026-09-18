@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { BookingBand } from "@/components/home/BookingBand";
 import { PolicyNotices } from "@/components/policies/PolicyNotices";
-import { SERVICE_CATEGORIES } from "@/lib/services";
+import { SERVICE_CATEGORIES, MENU_EFFECTIVE } from "@/lib/services";
 import { SITE } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="The menu"
         title="Services & Pricing"
-        intro="The full price list. Tips appreciated, never expected. Call ahead or walk in — consultations are free."
+        intro={`The full price list, effective ${MENU_EFFECTIVE}. Tips appreciated, never expected. Call ahead or walk in — consultations are free.`}
       />
       <section className="bg-[var(--color-bg)] py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-6 space-y-20">
