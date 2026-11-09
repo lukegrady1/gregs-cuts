@@ -15,16 +15,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-const U = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?w=1200&q=80&auto=format&fit=crop`;
-
-const SHOP_PHOTOS = [
-  { src: U("1621645582931-d1d3e6564943"), alt: "Black and silver barber chair" },
-  { src: U("1576168056582-0a851a87ab8e"), alt: "Brown leather chairs lined up" },
-  { src: U("1621605815971-fbc98d665033"), alt: "Tools of the trade — clippers, scissors, combs" },
-  { src: U("1675599193990-33d71150902b"), alt: "Brick wall and wooden floor inside the shop" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -64,27 +54,6 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-12 justify-items-center">
             {BARBERS.map((b) => (
               <BarberCard key={b.slug} barber={b} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--color-bg)] py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-6">
-          <SectionHeading eyebrow="The shop" title="Look around." />
-          <div className="mt-12 grid grid-cols-2 gap-4">
-            {SHOP_PHOTOS.map((p) => (
-              <VintageFrame key={p.src} className="bg-[var(--color-surface)]">
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-              </VintageFrame>
             ))}
           </div>
         </div>
