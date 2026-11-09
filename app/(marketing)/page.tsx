@@ -3,7 +3,7 @@ import { PromoReel } from "@/components/home/PromoReel";
 import { ServicesSnapshot } from "@/components/home/ServicesSnapshot";
 import { WhyGregs } from "@/components/home/WhyGregs";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
-import { GiveawayFlyer } from "@/components/home/GiveawayFlyer";
+import { VeteransDayFlyer } from "@/components/home/VeteransDayFlyer";
 import { LiceFlyer } from "@/components/home/LiceFlyer";
 import { DailyUpdates } from "@/components/home/DailyUpdates";
 import { Reviews } from "@/components/home/Reviews";
@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <Hero />
       <BarberPoleDivider />
-      <GiveawayFlyer />
+      <VeteransDayFlyer />
       <ServicesSnapshot />
       <WhyGregs />
       <GalleryPreview />
