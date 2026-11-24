@@ -7,26 +7,26 @@ import { VintageFrame } from "@/components/ui/VintageFrame";
 import { SITE } from "@/lib/content";
 
 const FLYER_ALT =
-  "Greg's Cuts Veterans Day Appreciation flyer. Wednesday, November 11, 2026, 9:00 AM to 1:00 PM. In honor of those who have served our country, Greg's Cuts will be opening for a special Veterans Day event. Free haircuts exclusively for military veterans. Haircut services only. Military ID required. Thank you for your courage, sacrifice, and service. Greg's Cuts, 10 Pearson Blvd, Gardner, MA 01440. 351-356-3551. Gregscuts.com.";
+  "Greg's Cuts holiday teaser. A flowing wave of dark hair with crimson highlights on a black background. The holidays are coming. So is something colorful. Coming this December.";
 
-export function VeteransDayFlyer() {
+export function HolidayTeaserFlyer() {
   return (
     <section className="bg-[var(--color-bg)] py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6">
         <SectionHeading
-          eyebrow="Veterans Day Appreciation"
-          title="Free haircuts for veterans."
-          subtitle="Wednesday, November 11, 2026, from 9:00 AM to 1:00 PM. In honor of those who have served our country, Greg's Cuts is opening for a special Veterans Day event. Haircut services only. Military ID required."
+          eyebrow="Coming This December"
+          title="The holidays are coming."
+          subtitle="So is something colorful. Stay tuned for what Greg's Cuts has in store this December."
           align="center"
         />
 
         <div className="mt-12">
           <VintageFrame className="bg-[var(--color-surface)] overflow-hidden">
             <Image
-              src={asset("/gregs-cuts-veterans-day-flyer.webp")}
+              src={asset("/gregs-cuts-holiday-color-teaser.webp")}
               alt={FLYER_ALT}
-              width={1536}
-              height={1024}
+              width={819}
+              height={918}
               sizes="(max-width: 768px) 100vw, 720px"
               className="block w-full h-auto"
             />
